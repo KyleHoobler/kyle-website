@@ -72,7 +72,7 @@ function App() {
         
         <div className="job">
           <div className="job-header">
-            <h3>Olo Inc</h3>
+            <a href='https://www.linkedin.com/company/olo/'><h3> Olo Inc</h3></a>
             <p className="location">Remote</p>
           </div>
           <div className="job-title">
@@ -94,7 +94,7 @@ function App() {
 
         <div className="job">
           <div className="job-header">
-            <h3>Huntington Ingalls Industries</h3>
+            <a href='https://www.linkedin.com/company/wearehii/'><h3>Huntington Ingalls Industries</h3></a>
             <p className="location">Newport News, VA</p>
           </div>
           <div className="job-title">
@@ -119,7 +119,7 @@ function App() {
 
         <div className="job">
           <div className="job-header">
-            <h3>Jefferson Lab</h3>
+            <a href='https://www.linkedin.com/company/jefferson-lab/'><h3>Jefferson Lab</h3></a>
             <p className="location">Newport News, VA</p>
           </div>
           <div className="job-title">
