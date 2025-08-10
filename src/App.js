@@ -28,6 +28,7 @@ function App() {
     <div className="App">
       <header className="header animate-fade-in">
         <h1 className="glowing-text">Kyle Hoobler</h1>
+        <h2 className="subtitle">Senior Software Engineer</h2>
         <div className="contact-info">
           <p>Yorktown, VA • (540) 316-8538 • thekhooplah@gmail.com</p>
           <p>
@@ -80,7 +81,7 @@ function App() {
         
         <div className="job">
           <div className="job-header">
-            <a href='https://www.linkedin.com/company/olo/'><h3> Olo Inc</h3></a>
+            <a href='https://www.linkedin.com/company/olo/'><h3>Olo Inc</h3></a>
             <p className="location">Remote</p>
           </div>
           <div className="job-title">
