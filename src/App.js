@@ -1,10 +1,33 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [isVisible, setIsVisible] = useState({});
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(prev => ({
+            ...prev,
+            [entry.target.id]: entry.isIntersecting
+          }));
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('section').forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="App">
-      <header className="header">
-        <h1>Kyle Hoobler</h1>
+      <header className="header animate-fade-in">
+        <h1 className="glowing-text">Kyle Hoobler</h1>
         <div className="contact-info">
           <p>Yorktown, VA • (540) 316-8538 • thekhooplah@gmail.com</p>
           <p>
@@ -15,14 +38,16 @@ function App() {
         </div>
       </header>
 
-      <section className="summary">
+      <section id="summary" className={`summary slide-in ${isVisible.summary ? 'visible' : ''}`}>
         <h2>Summary</h2>
-        <p>Senior Software Engineer with 7+ years of experience building secure, scalable .NET and cloud-native systems for enterprise and government clients. Proven track record of delivering high-impact billing, logistics, and automation platforms in Agile environments. Adept at designing microservices, leading cross-functional projects, and mentoring developers. Core expertise in C#, .NET Core, React, AWS, and modern CI/CD pipelines.</p>
+        <div className="card">
+          <p>Senior Software Engineer with 7+ years of experience building secure, scalable .NET and cloud-native systems for enterprise and government clients. Proven track record of delivering high-impact billing, logistics, and automation platforms in Agile environments. Adept at designing microservices, leading cross-functional projects, and mentoring developers. Core expertise in C#, .NET Core, React, AWS, and modern CI/CD pipelines.</p>
+        </div>
       </section>
 
-      <section className="skills">
+      <section id="skills" className={`skills slide-in ${isVisible.skills ? 'visible' : ''}`}>
         <h2>Technical Skills</h2>
-        <div className="skills-grid">
+        <div className="skills-grid hover-effect">
           <div className="skill-category">
             <h3>Languages</h3>
             <p>C#, Java, JavaScript, TypeScript, SQL, Apex</p>
@@ -42,7 +67,7 @@ function App() {
         </div>
       </section>
 
-      <section className="experience">
+      <section id="experience" className={`experience slide-in ${isVisible.experience ? 'visible' : ''}`}>
         <h2>Professional Experience</h2>
         
         <div className="job">
@@ -109,7 +134,7 @@ function App() {
         </div>
       </section>
 
-      <section className="education">
+      <section id="education" className={`education slide-in ${isVisible.education ? 'visible' : ''}`}>
         <h2>Education</h2>
         <div className="education-item">
           <h3>Bachelor of Science in Computer Science</h3>
