@@ -31,9 +31,9 @@ function App() {
         <div className="contact-info">
           <p>Yorktown, VA • (540) 316-8538 • thekhooplah@gmail.com</p>
           <p>
-            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a> •{' '}
-            <a href="#" target="_blank" rel="noopener noreferrer">GitHub – Work</a> •{' '}
-            <a href="#" target="_blank" rel="noopener noreferrer">GitHub – Personal</a>
+            <a href="https://www.linkedin.com/in/kyle-hoobler/">LinkedIn</a> •{' '}
+            <a href="https://github.com/KyleHooblerOlo">GitHub – Work</a> •{' '}
+            <a href="https://github.com/KyleHoobler">GitHub – Personal</a>
           </p>
         </div>
       </header>
