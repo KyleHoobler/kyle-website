@@ -49,8 +49,12 @@ function App() {
         <h2>Technical Skills</h2>
         <div className="skills-grid hover-effect">
           <div className="skill-category">
-            <h3>Languages</h3>
+            <h3>Fluent Languages</h3>
             <p>C#, Java, JavaScript, TypeScript, SQL, Apex</p>
+          </div>
+          <div className="skill-category">
+            <h3>Languages With Some Experience</h3>
+            <p>C++, Python, Go</p>
           </div>
           <div className="skill-category">
             <h3>Frameworks</h3>
@@ -63,6 +67,10 @@ function App() {
           <div className="skill-category">
             <h3>Databases/CRMs</h3>
             <p>MSSQL, PostgreSQL, MySQL, Salesforce, Intacct</p>
+          </div>
+          <div className="skill-category">
+            <h3>Configurations</h3>
+            <p>Terraform, yaml, toml, json</p>
           </div>
         </div>
       </section>
@@ -86,7 +94,7 @@ function App() {
           <ul>
             <li>Developed microservices and RESTful APIs in .NET Core, deployed on scalable AWS infrastructure</li>
             <li>Built a performant TypeScript/React SPA using Vite and implemented an automated CI/CD pipeline</li>
-            <li>Re-architected ownership transfer workflows, improving success rate from 80% to 100%</li>
+            <li>Re-architected ownership transfer workflows, improving success rate from 80% to 100% and reducing support overhead</li>
             <li>Increased system resiliency with defensive programming and improved monitoring</li>
             <li>Mentored junior developers and led peer reviews to uphold quality and team growth</li>
           </ul>
